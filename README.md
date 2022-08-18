@@ -12,7 +12,7 @@ You can use **Composer** or download the library.
 Require this package with composer:
 
 ```sh
-composer require christianruhstaller/bexio-api-php-client
+composer require stkf/bexio-api-php-client
 ```
 Include the autoloader:
 
