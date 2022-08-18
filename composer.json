@@ -1,12 +1,12 @@
 {
-    "name": "christianruhstaller/bexio-api-php-client",
-    "description": "Client library for bexio API",
+    "name": "stkf/bexio-api-php-client",
+    "description": "Client library for bexio API. Forked from https://github.com/christianruhstaller/bexio-api-php-client",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Christian Ruhstaller",
-            "email": "christian.ruhstaller@goldinteractive.ch"
+            "name": "StickyF",
+            "email": "aymeric.bellefontaine@gmail.com"
         }
     ],
     "require": {
