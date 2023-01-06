@@ -195,7 +195,7 @@ class Invoice extends Bexio
     }
 
     /**
-     * Celete a invoice payment
+     * delete a invoice payment
      *
      * @param $id
      * @param $paymentId
@@ -205,4 +205,18 @@ class Invoice extends Bexio
     {
         return $this->client->delete('kb_invoice/'.$id.'/payment/'.$paymentId, []);
     }
+
+    /**
+     * Cancel an Invoice
+     *
+     * @param $id
+     * @param $paymentId
+     * @return mixed
+     */
+    public function cancelInvoice($id)
+    {
+        // https://api.bexio.com/2.0/kb_invoice/{invoice_id}/cancel
+        return $this->client->post('kb_invoice/'.$id.'/cancel', []);
+    }
+
 }
