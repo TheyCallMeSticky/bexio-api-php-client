@@ -107,7 +107,8 @@ class Invoice extends Bexio
      * @param $id
      * @return mixed
      */
-    public function sendInvoice($id,$params)
+
+    public function sendInvoice($id, $params = [])
     {
         return $this->client->post('kb_invoice/'.$id.'/send', $params);
     }
