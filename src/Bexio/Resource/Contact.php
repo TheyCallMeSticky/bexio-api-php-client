@@ -9,6 +9,7 @@ class Contact extends Bexio {
     /**
      * Gets all the contacts
      *
+     * @param array $params
      * @return array
      */
     public function getContacts(array $params = [])
@@ -35,7 +36,7 @@ class Contact extends Bexio {
      */
     public function getContact($id)
     {
-        return $this->client->get('contact/search/' . $id, []);
+        return $this->client->get('contact/' . $id, []);
     }
 
     /**
@@ -44,19 +45,42 @@ class Contact extends Bexio {
      * @param array $params
      * @return mixed
      */
-    public function createContact($params = [])
+    public function createContact(array $params = [])
     {
         return $this->client->post('contact', $params);
     }
 
     /**
-     * Get relations from contacts
+     * Edit contact
      *
+     * @param $id
+     * @param array $params
      * @return mixed
      */
-    public function getContactsRelations()
+    public function editContact($id, array $params = [])
     {
-        return $this->client->get('contact_relation', []);
+        return $this->client->post('contact/'. $id, $params);
     }
 
+    /**
+     * Get relations from contacts
+     *
+     * @param array $params
+     * @return mixed
+     */
+    public function getContactsRelations(array $params = [])
+    {
+        return $this->client->get('contact_relation', $params);
+    }
+
+    /**
+     * Delete specific contact
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function deleteContact($id)
+    {
+        return $this->client->delete('contact/' . $id);
+    }
 }
